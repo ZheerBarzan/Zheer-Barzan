@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:zheer_barzan/components/inverse_button.dart';
 
 class DesktopView extends StatelessWidget {
   const DesktopView({super.key});
@@ -72,6 +73,27 @@ class DesktopView extends StatelessWidget {
                                 style: GoogleFonts.poppins(fontSize: 30)),
                             Text('Software Engineer',
                                 style: GoogleFonts.poppins(fontSize: 30)),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            Row(
+                              children: [
+                                InverseButton(
+                                    text: "Download CV",
+                                    secondaryColor:
+                                        Theme.of(context).colorScheme.surface,
+                                    fontColor:
+                                        Theme.of(context).colorScheme.primary,
+                                    onPressed: () {}),
+                                InverseButton(
+                                    fontColor:
+                                        Theme.of(context).colorScheme.primary,
+                                    secondaryColor:
+                                        Theme.of(context).colorScheme.surface,
+                                    text: "Contact me",
+                                    onPressed: () {}),
+                              ],
+                            ),
                           ],
                         ),
                         const FlutterLogo(
