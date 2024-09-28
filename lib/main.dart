@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:zheer_barzan/pages/home_page.dart';
+import 'package:zheer_barzan/pages/desktopView.dart';
 import 'package:zheer_barzan/themes/theme_provider.dart';
 
 void main() async {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Zheer Barzan',
       theme: Provider.of<ThemeProvider>(context).themeData,
-      home: const HomePage(),
+      home: const DesktopView(),
     );
   }
 }

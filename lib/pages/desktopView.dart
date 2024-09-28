@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class DesktopView extends StatelessWidget {
+  const DesktopView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
+        /* appBar: AppBar(
           title: Text('Zheer Barzan', style: GoogleFonts.poppins(fontSize: 30)),
           actions: [
             if (MediaQuery.of(context).size.width > 600) ...[
@@ -34,8 +35,8 @@ class HomePage extends StatelessWidget {
               ),
             ]
           ],
-        ),
-        drawer: MediaQuery.of(context).size.width <= 600
+        ),*/
+        /*drawer: MediaQuery.of(context).size.width <= 600
             ? Drawer(
                 child: ListView(
                   children: [
@@ -48,26 +49,49 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               )
-            : null,
+            : null,*/
         backgroundColor: Theme.of(context).colorScheme.surface,
         body: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text('Zheer Barzan',
-                        style: GoogleFonts.poppins(fontSize: 30)),
-                  ],
+            scrollDirection: Axis.vertical,
+            child: Column(
+              children: [
+                Container(
+                  height: height * 0.8,
+                  width: width * 0.8,
+                  color: Theme.of(context).colorScheme.surface,
+                  child: Center(
+                    child: Row(
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Hello I\'m ',
+                                style: GoogleFonts.poppins(fontSize: 30)),
+                            Text('Zheer Barzan',
+                                style: GoogleFonts.poppins(fontSize: 30)),
+                            Text('Software Engineer',
+                                style: GoogleFonts.poppins(fontSize: 30)),
+                          ],
+                        ),
+                        const FlutterLogo(
+                          size: 300,
+                        )
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ),
+                Container(
+                  height: height,
+                  width: width,
+                  color: Theme.of(context).colorScheme.tertiary,
+                  child: Center(
+                    child: Text('Desktop View',
+                        style: GoogleFonts.poppins(fontSize: 30)),
+                  ),
+                ),
+              ],
+            )),
       ),
     );
   }
