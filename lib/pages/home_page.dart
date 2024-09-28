@@ -8,71 +8,65 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.surface,
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Zheer Barzan'),
-                  Row(
-                    children: [
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('About'),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Experince'),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Projects'),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text('Contact'),
-                      ),
-                    ],
-                  )
-                ],
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text('Zheer Barzan', style: GoogleFonts.poppins(fontSize: 30)),
+          actions: [
+            if (MediaQuery.of(context).size.width > 600) ...[
+              TextButton(
+                onPressed: () {},
+                child: Text('About', style: GoogleFonts.poppins(fontSize: 30)),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 50),
-              child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                  height: MediaQuery.of(context).size.height * 0.8,
-                  width: MediaQuery.of(context).size.width,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        children: [
-                          Text("Hello, I'm ",
-                              style: GoogleFonts.roboto(
-                                color: Theme.of(context).colorScheme.surface,
-                              )),
-                          Text('Zheer Barzan',
-                              style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.surface)),
-                          Text('I am a Flutter Developer',
-                              style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.surface)),
-                        ],
-                      ),
-                      Image.asset('assets/images/zheer.png', height: 300),
-                    ],
-                  )),
-            ),
+              TextButton(
+                onPressed: () {},
+                child: Text('Experience',
+                    style: GoogleFonts.poppins(fontSize: 30)),
+              ),
+              TextButton(
+                onPressed: () {},
+                child:
+                    Text('Projects ', style: GoogleFonts.poppins(fontSize: 30)),
+              ),
+              TextButton(
+                onPressed: () {},
+                child:
+                    Text('Contact', style: GoogleFonts.poppins(fontSize: 30)),
+              ),
+            ]
           ],
+        ),
+        drawer: MediaQuery.of(context).size.width <= 600
+            ? Drawer(
+                child: ListView(
+                  children: [
+                    TextButton(onPressed: () {}, child: const Text('Home')),
+                    TextButton(onPressed: () {}, child: const Text('About')),
+                    TextButton(
+                        onPressed: () {}, child: const Text('Experience')),
+                    TextButton(onPressed: () {}, child: const Text('Projects')),
+                    TextButton(onPressed: () {}, child: const Text('Contact')),
+                  ],
+                ),
+              )
+            : null,
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text('Zheer Barzan',
+                        style: GoogleFonts.poppins(fontSize: 30)),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
