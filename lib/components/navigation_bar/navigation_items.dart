@@ -1,12 +1,15 @@
+import 'package:flutter/material.dart';
+
 class NavigationItems {
   String text;
+  IconData? icon;
 
-  NavigationItems({required this.text});
+  NavigationItems({required this.text, this.icon});
 }
 
 final kNavigationItems = [
-  NavigationItems(text: 'Home'),
-  NavigationItems(text: 'About'),
-  NavigationItems(text: 'Projects'),
-  NavigationItems(text: 'Contact'),
+  NavigationItems(text: 'Home', icon: Icons.home),
+  NavigationItems(text: 'About', icon: Icons.account_box),
+  NavigationItems(text: 'Projects', icon: Icons.work),
+  NavigationItems(text: 'Contact', icon: Icons.contact_page),
 ];

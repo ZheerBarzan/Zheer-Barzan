@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -11,6 +12,7 @@ class NavigationBarView extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
+    final isSmall = MediaQuery.of(context).size.width < 850;
     return ResponsiveBuilder(
       builder: (context, size) {
         if (size.isMobile) {
@@ -22,9 +24,9 @@ class NavigationBarView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 children: [
-                  Text(
+                  AutoSizeText(
                     'Zheer Barzan',
-                    style: GoogleFonts.poppins(fontSize: 20),
+                    style: GoogleFonts.poppins(fontSize: isSmall ? 20 : 30),
                   ),
                   const Spacer(),
                   IconButton(
@@ -47,9 +49,9 @@ class NavigationBarView extends StatelessWidget {
             ),
             child: Row(
               children: [
-                Text(
+                AutoSizeText(
                   'Zheer Barzan',
-                  style: GoogleFonts.poppins(fontSize: 30),
+                  style: GoogleFonts.poppins(fontSize: isSmall ? 20 : 30),
                 ),
                 const Spacer(),
                 for (var item in kNavigationItems)

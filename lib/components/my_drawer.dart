@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:zheer_barzan/components/my_list_tile.dart';
+import 'package:zheer_barzan/components/navigation_bar/navigation_items.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -24,17 +25,13 @@ class MyDrawer extends StatelessWidget {
                         size: 50),
                   ),
                   //home list tile
-                  MyListTile(
-                    icon: Icons.home,
-                    text: "H O M E",
-                    onTap: () => Navigator.pop(context),
-                  ),
+                  for (var items in kNavigationItems)
+                    MyListTile(
+                      icon: items.icon,
+                      text: items.text,
+                      onTap: () => Navigator.pop(context),
+                    ),
                   //settings list tile
-                  MyListTile(
-                    icon: Icons.settings,
-                    text: "S E T T I N G S",
-                    onTap: () {},
-                  ),
                 ],
               ),
               //logout
