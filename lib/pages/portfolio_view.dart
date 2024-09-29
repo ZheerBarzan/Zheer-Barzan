@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:zheer_barzan/components/my_drawer.dart';
+import 'package:zheer_barzan/components/navigation_bar/navigation_bar_view.dart';
 import 'package:zheer_barzan/pages/desktop/hero_desktop_view.dart';
 
 class PortfolioView extends StatelessWidget {
@@ -11,51 +13,13 @@ class PortfolioView extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        /* appBar: AppBar(
-          title: Text('Zheer Barzan', style: GoogleFonts.poppins(fontSize: 30)),
-          actions: [
-            if (MediaQuery.of(context).size.width > 600) ...[
-              TextButton(
-                onPressed: () {},
-                child: Text('About', style: GoogleFonts.poppins(fontSize: 30)),
-              ),
-              TextButton(
-                onPressed: () {},
-                child: Text('Experience',
-                    style: GoogleFonts.poppins(fontSize: 30)),
-              ),
-              TextButton(
-                onPressed: () {},
-                child:
-                    Text('Projects ', style: GoogleFonts.poppins(fontSize: 30)),
-              ),
-              TextButton(
-                onPressed: () {},
-                child:
-                    Text('Contact', style: GoogleFonts.poppins(fontSize: 30)),
-              ),
-            ]
-          ],
-        ),*/
-        /*drawer: MediaQuery.of(context).size.width <= 600
-            ? Drawer(
-                child: ListView(
-                  children: [
-                    TextButton(onPressed: () {}, child: const Text('Home')),
-                    TextButton(onPressed: () {}, child: const Text('About')),
-                    TextButton(
-                        onPressed: () {}, child: const Text('Experience')),
-                    TextButton(onPressed: () {}, child: const Text('Projects')),
-                    TextButton(onPressed: () {}, child: const Text('Contact')),
-                  ],
-                ),
-              )
-            : null,*/
+        endDrawer: const MyDrawer(),
         backgroundColor: Theme.of(context).colorScheme.surface,
         body: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
+                const NavigationBarView(),
                 HeroView(height: height, width: width),
                 Container(
                   height: height,
