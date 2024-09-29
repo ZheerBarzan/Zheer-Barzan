@@ -6,9 +6,8 @@ class InverseButton extends StatelessWidget {
   final String text;
   final Color secondaryColor;
 
-  bool isPressed = false;
   final void Function()? onPressed;
-  InverseButton(
+  const InverseButton(
       {super.key,
       required this.text,
       this.onPressed,

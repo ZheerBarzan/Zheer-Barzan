@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:zheer_barzan/components/inverse_button.dart';
+import 'package:zheer_barzan/pages/desktop/hero_desktop_view.dart';
 
-class DesktopView extends StatelessWidget {
-  const DesktopView({super.key});
+class PortfolioView extends StatelessWidget {
+  const PortfolioView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -56,53 +56,7 @@ class DesktopView extends StatelessWidget {
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
-                Container(
-                  height: height * 0.8,
-                  width: width * 0.8,
-                  color: Theme.of(context).colorScheme.surface,
-                  child: Center(
-                    child: Row(
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Hello I\'m ',
-                                style: GoogleFonts.poppins(fontSize: 30)),
-                            Text('Zheer Barzan',
-                                style: GoogleFonts.poppins(fontSize: 30)),
-                            Text('Software Engineer',
-                                style: GoogleFonts.poppins(fontSize: 30)),
-                            const SizedBox(
-                              height: 30,
-                            ),
-                            Row(
-                              children: [
-                                InverseButton(
-                                    text: "Download CV",
-                                    secondaryColor:
-                                        Theme.of(context).colorScheme.surface,
-                                    fontColor:
-                                        Theme.of(context).colorScheme.primary,
-                                    onPressed: () {}),
-                                InverseButton(
-                                    fontColor:
-                                        Theme.of(context).colorScheme.primary,
-                                    secondaryColor:
-                                        Theme.of(context).colorScheme.surface,
-                                    text: "Contact me",
-                                    onPressed: () {}),
-                              ],
-                            ),
-                          ],
-                        ),
-                        const FlutterLogo(
-                          size: 300,
-                        )
-                      ],
-                    ),
-                  ),
-                ),
+                HeroView(height: height, width: width),
                 Container(
                   height: height,
                   width: width,
