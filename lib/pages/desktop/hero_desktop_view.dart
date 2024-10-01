@@ -15,6 +15,9 @@ class HeroView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final isSmall = width < 950;
+    final imageWidth = width * 0.47;
     return ResponsiveBuilder(
       builder: (context, size) {
         if (size.isMobile) return const HeroMobileView();
@@ -22,19 +25,18 @@ class HeroView extends StatelessWidget {
           height: height * 0.8,
           width: width * 0.8,
           color: Theme.of(context).colorScheme.surface,
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Expanded(
+                const Expanded(
                   child: HeroBody(
                     isMobile: false,
                   ),
                 ),
-                FlutterLogo(
-                  size: 300,
-                )
+                Image.asset("assets/zheer1.png",
+                    height: isSmall ? imageWidth : 500),
               ],
             ),
           ),
