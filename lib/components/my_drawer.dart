@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:zheer_barzan/components/my_list_tile.dart';
+import 'package:zheer_barzan/components/my_logo.dart';
 import 'package:zheer_barzan/components/navigation_bar/navigation_items.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -19,10 +20,8 @@ class MyDrawer extends StatelessWidget {
               Column(
                 children: [
                   //logo
-                  DrawerHeader(
-                    child: Icon(Icons.person,
-                        color: Theme.of(context).colorScheme.inversePrimary,
-                        size: 50),
+                  const DrawerHeader(
+                    child: MyLogo(),
                   ),
                   //home list tile
                   for (var items in kNavigationItems)

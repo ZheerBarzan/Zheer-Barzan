@@ -18,10 +18,7 @@ class HeroMobileView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
         child: Column(
           children: [
-            FlutterLogo(
-              size: height * 0.3,
-            ),
-            const Spacer(),
+            Expanded(child: Image.asset("assets/zheer1.png", height: 300)),
             const HeroBody(
               isMobile: true,
             ),

@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:zheer_barzan/components/my_logo.dart';
 import 'package:zheer_barzan/components/navigation_bar/navigaiton_bar_item.dart';
 import 'package:zheer_barzan/components/navigation_bar/navigation_items.dart';
 
@@ -24,10 +25,7 @@ class NavigationBarView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 children: [
-                  AutoSizeText(
-                    'Zheer Barzan',
-                    style: GoogleFonts.poppins(fontSize: isSmall ? 20 : 30),
-                  ),
+                  const MyLogo(),
                   const Spacer(),
                   IconButton(
                     onPressed: () => Scaffold.of(context).openEndDrawer(),
