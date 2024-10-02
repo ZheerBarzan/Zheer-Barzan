@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/components/my_drawer.dart';
 import 'package:zheer_barzan/components/navigation_bar/navigation_bar_view.dart';
 import 'package:zheer_barzan/pages/desktop/hero_desktop_view.dart';
+import 'package:zheer_barzan/pages/project_view.dart';
 
 class PortfolioView extends StatelessWidget {
   const PortfolioView({super.key});
@@ -20,7 +21,8 @@ class PortfolioView extends StatelessWidget {
             child: Column(
               children: [
                 const NavigationBarView(),
-                HeroView(height: height, width: width),
+                const HeroView(),
+                const ProjectView(),
                 Container(
                   height: height,
                   width: width,

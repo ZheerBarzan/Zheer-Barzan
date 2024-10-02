@@ -6,15 +6,11 @@ import 'package:zheer_barzan/pages/mobile/hero_mobile_view.dart';
 class HeroView extends StatelessWidget {
   const HeroView({
     super.key,
-    required this.height,
-    required this.width,
   });
-
-  final double height;
-  final double width;
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     final isSmall = width < 950;
     final imageWidth = width * 0.47;
