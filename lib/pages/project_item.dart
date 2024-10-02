@@ -15,10 +15,31 @@ class ProjectItem {
 
 final kProjectItems = [
   ProjectItem(
-    title: 'Zheer Barzan',
-    description: 'A Flutter project for me and my friends.',
-    image: 'assets/zheer1.png',
+    title: 'Project_Kasparov',
+    description: 'A chess game made in Flutter',
+    image: 'assets/img/chess.gif',
+    technologies: ['Flutter', 'Dart'],
+    link: 'https://github.com/zheerbarzan/zheer_barzan',
+  ),
+  ProjectItem(
+    title: 'Project_Jordan',
+    description: 'A NBA News Application',
+    image: 'assets/img/jordan.gif',
     technologies: ['Flutter', 'Dart', 'Firebase'],
+    link: 'https://github.com/zheerbarzan/zheer_barzan',
+  ),
+  ProjectItem(
+    title: 'Project_MineSweeper',
+    description: 'A MineSweeper game made in Flutter',
+    image: 'assets/img/mineswepper.gif',
+    technologies: ['Flutter', 'Dart'],
+    link: 'https://github.com/zheerbarzan/zheer_barzan',
+  ),
+  ProjectItem(
+    title: 'Project_Forecast',
+    description: 'A realtime Weather application made in Flutter',
+    image: 'assets/img/weather.gif',
+    technologies: ['Flutter', 'Dart'],
     link: 'https://github.com/zheerbarzan/zheer_barzan',
   )
 ];
