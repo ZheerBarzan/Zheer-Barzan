@@ -28,7 +28,9 @@ class ProjectMobileView extends StatelessWidget {
                   style: GoogleFonts.poppins(fontSize: 30)),
               AutoSizeText(
                 "my works",
-                style: GoogleFonts.poppins(fontSize: 30),
+                style: GoogleFonts.poppins(
+                    fontSize: 30,
+                    color: Theme.of(context).colorScheme.tertiary),
               ),
               Scrollbar(
                 thumbVisibility: true,

@@ -1,4 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:zheer_barzan/components/skill_box.dart';
+import 'package:zheer_barzan/pages/skills_item.dart';
 
 class SkillMobileView extends StatelessWidget {
   final double height;
@@ -7,6 +11,30 @@ class SkillMobileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      height: height * 0.9,
+      width: width,
+      color: Theme.of(context).colorScheme.surface,
+      child: Expanded(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            AutoSizeText("Skills", style: GoogleFonts.poppins(fontSize: 30)),
+            AutoSizeText("my skills",
+                style: GoogleFonts.poppins(
+                    fontSize: 30,
+                    color: Theme.of(context).colorScheme.tertiary)),
+            const SizedBox(
+              height: 20,
+            ),
+            for (var skill in kSkillsItems)
+              SkillBox(
+                  text: skill.title,
+                  image: skill.image,
+                  borderColor: skill.borderColor),
+          ],
+        ),
+      ),
+    );
   }
 }

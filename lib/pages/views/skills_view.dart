@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:zheer_barzan/pages/desktop/skill_desktop_view.dart';
+import 'package:zheer_barzan/pages/mobile/skill_mobile_view.dart';
 
-class MyWidget extends StatelessWidget {
+class SkillsView extends StatelessWidget {
   final double height;
   final double width;
-  const MyWidget({super.key, required this.height, required this.width});
+  const SkillsView({super.key, required this.height, required this.width});
 
   @override
   Widget build(BuildContext context) {
