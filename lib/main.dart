@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:zheer_barzan/pages/views/portfolio_view.dart';
+import 'package:zheer_barzan/themes/dark_theme.dart';
+import 'package:zheer_barzan/themes/light_theme.dart';
 import 'package:zheer_barzan/themes/theme_provider.dart';
 
 void main() async {
@@ -15,9 +17,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scrollBehavior: const MaterialScrollBehavior().copyWith(scrollbars: true),
       debugShowCheckedModeBanner: false,
       title: 'Zheer Barzan',
-      theme: Provider.of<ThemeProvider>(context).themeData,
+      theme: lightMode,
+      darkTheme: darkMode,
       home: const PortfolioView(),
     );
   }

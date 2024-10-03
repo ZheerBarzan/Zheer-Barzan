@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ProjectMobileView extends StatelessWidget {
-  const ProjectMobileView({super.key});
+  final double height;
+  final double width;
+  const ProjectMobileView(
+      {super.key, required this.height, required this.width});
 
   @override
   Widget build(BuildContext context) {

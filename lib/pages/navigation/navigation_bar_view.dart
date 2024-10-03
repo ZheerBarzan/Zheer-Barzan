@@ -7,12 +7,13 @@ import 'package:zheer_barzan/pages/navigation/navigaiton_bar_item.dart';
 import 'package:zheer_barzan/pages/navigation/navigation_items.dart';
 
 class NavigationBarView extends StatelessWidget {
-  const NavigationBarView({super.key});
+  final double height;
+  final double width;
+  const NavigationBarView(
+      {super.key, required this.height, required this.width});
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
     final isSmall = MediaQuery.of(context).size.width < 850;
     return ResponsiveBuilder(
       builder: (context, size) {

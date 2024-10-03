@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/components/my_drawer.dart';
 import 'package:zheer_barzan/pages/navigation/navigation_bar_view.dart';
-import 'package:zheer_barzan/pages/desktop/home_desktop_view.dart';
 import 'package:zheer_barzan/pages/views/home_view.dart';
 import 'package:zheer_barzan/pages/views/project_view.dart';
 
@@ -21,9 +20,9 @@ class PortfolioView extends StatelessWidget {
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
-                const NavigationBarView(),
-                const HomeView(),
-                const ProjectView(),
+                NavigationBarView(height: height, width: width),
+                HomeView(height: height, width: width),
+                ProjectView(height: height, width: width),
                 Container(
                   height: height,
                   width: width,

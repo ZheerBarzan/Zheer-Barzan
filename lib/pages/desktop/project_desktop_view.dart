@@ -5,16 +5,17 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/pages/project_item.dart';
 
 class ProjectDesktopView extends StatelessWidget {
-  const ProjectDesktopView({
+  final double height;
+  final double width;
+  final ScrollController _scrollController = ScrollController();
+  ProjectDesktopView({
     super.key,
+    required this.height,
+    required this.width,
   });
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
-    final isSmall = width < 950;
-    final imageWidth = width * 0.47;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: SizedBox(
@@ -28,34 +29,63 @@ class ProjectDesktopView extends StatelessWidget {
               "my works",
               style: GoogleFonts.poppins(fontSize: 30),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  for (final item in kProjectItems)
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Image.asset(
-                          item.image,
-                          height: 300,
-                          width: 300,
+            Scrollbar(
+              thumbVisibility: true,
+              trackVisibility: true,
+              interactive: true,
+              thickness: 10,
+              radius: const Radius.circular(100),
+              controller: _scrollController,
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    for (final item in kProjectItems)
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 25),
+                        child: Card(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset(
+                                item.image,
+                                height: 500,
+                                width: 500,
+                                fit: BoxFit.cover,
+                              ),
+                              const SizedBox(height: 10),
+                              AutoSizeText(
+                                item.title,
+                                style: GoogleFonts.poppins(fontSize: 25),
+                                maxLines: 1,
+                              ),
+                              const SizedBox(height: 10),
+                              AutoSizeText(
+                                item.description,
+                                style: GoogleFonts.poppins(fontSize: 15),
+                                maxLines: 3,
+                              ),
+                              const SizedBox(height: 10),
+                              Row(
+                                children: [
+                                  for (final tech in item.technologies)
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Chip(
+                                        label: Text(tech),
+                                        shape: const StadiumBorder(),
+                                      ),
+                                    ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                        AutoSizeText(
-                          item.title,
-                          style: GoogleFonts.poppins(fontSize: 30),
-                        ),
-                        AutoSizeText(
-                          item.description,
-                          style: GoogleFonts.poppins(fontSize: 25),
-                        ),
-                        Row(children: [
-                          for (final tech in item.technologies)
-                            Chip(label: Text(tech))
-                        ])
-                      ],
-                    )
-                ],
+                      ),
+                  ],
+                ),
               ),
             )
           ],
