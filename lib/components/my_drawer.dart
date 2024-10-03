@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:zheer_barzan/components/my_list_tile.dart';
 import 'package:zheer_barzan/components/my_logo.dart';
-import 'package:zheer_barzan/components/navigation_bar/navigation_items.dart';
+import 'package:zheer_barzan/pages/navigation/navigation_items.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});

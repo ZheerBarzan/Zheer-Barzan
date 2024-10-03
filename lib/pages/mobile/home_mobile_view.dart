@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:zheer_barzan/pages/hero_body.dart';
+import 'package:zheer_barzan/pages/home_body.dart';
 
-class HeroMobileView extends StatelessWidget {
-  const HeroMobileView({
+class HomeMobileView extends StatelessWidget {
+  const HomeMobileView({
     super.key,
   });
 
@@ -19,7 +19,7 @@ class HeroMobileView extends StatelessWidget {
         child: Column(
           children: [
             Expanded(child: Image.asset("assets/zheer1.png", height: 300)),
-            const HeroBody(
+            const HomeBody(
               isMobile: true,
             ),
           ],

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/components/inverse_button.dart';
 
-class HeroBody extends StatelessWidget {
+class HomeBody extends StatelessWidget {
   final bool isMobile;
-  const HeroBody({
+  const HomeBody({
     super.key,
     required this.isMobile,
   });

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:zheer_barzan/pages/hero_body.dart';
-import 'package:zheer_barzan/pages/mobile/hero_mobile_view.dart';
+import 'package:zheer_barzan/pages/home_body.dart';
 
-class HeroView extends StatelessWidget {
-  const HeroView({
+class HomeDesktopView extends StatelessWidget {
+  const HomeDesktopView({
     super.key,
   });
 
@@ -16,7 +15,6 @@ class HeroView extends StatelessWidget {
     final imageWidth = width * 0.47;
     return ResponsiveBuilder(
       builder: (context, size) {
-        if (size.isMobile) return const HeroMobileView();
         return Container(
           height: height * 0.8,
           width: width * 0.8,
@@ -27,7 +25,7 @@ class HeroView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 const Expanded(
-                  child: HeroBody(
+                  child: HomeBody(
                     isMobile: false,
                   ),
                 ),

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:zheer_barzan/components/my_logo.dart';
-import 'package:zheer_barzan/components/navigation_bar/navigaiton_bar_item.dart';
-import 'package:zheer_barzan/components/navigation_bar/navigation_items.dart';
+import 'package:zheer_barzan/pages/navigation/navigaiton_bar_item.dart';
+import 'package:zheer_barzan/pages/navigation/navigation_items.dart';
 
 class NavigationBarView extends StatelessWidget {
   const NavigationBarView({super.key});

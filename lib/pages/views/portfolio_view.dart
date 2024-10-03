@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/components/my_drawer.dart';
-import 'package:zheer_barzan/components/navigation_bar/navigation_bar_view.dart';
-import 'package:zheer_barzan/pages/desktop/hero_desktop_view.dart';
-import 'package:zheer_barzan/pages/project_view.dart';
+import 'package:zheer_barzan/pages/navigation/navigation_bar_view.dart';
+import 'package:zheer_barzan/pages/desktop/home_desktop_view.dart';
+import 'package:zheer_barzan/pages/views/home_view.dart';
+import 'package:zheer_barzan/pages/views/project_view.dart';
 
 class PortfolioView extends StatelessWidget {
   const PortfolioView({super.key});
@@ -21,7 +22,7 @@ class PortfolioView extends StatelessWidget {
             child: Column(
               children: [
                 const NavigationBarView(),
-                const HeroView(),
+                const HomeView(),
                 const ProjectView(),
                 Container(
                   height: height,
