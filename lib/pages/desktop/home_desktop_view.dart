@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:zheer_barzan/components/inverse_button.dart';
+import 'package:zheer_barzan/components/neu_box.dart';
 
 class HomeDesktopView extends StatelessWidget {
   final double height;
@@ -60,8 +61,13 @@ class HomeDesktopView extends StatelessWidget {
                     ),
                   ],
                 )),
-                Image.asset("assets/zheer1.png",
-                    height: isSmall ? imageWidth : 500),
+                NeuBox(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset("assets/zheer1.JPG",
+                        height: isSmall ? imageWidth : 500),
+                  ),
+                ),
               ],
             ),
           ),

@@ -16,7 +16,7 @@ class ProjectItem {
 final kProjectItems = [
   ProjectItem(
     title: 'Project_Kasparov',
-    description: 'A chess game made in Flutter',
+    description: 'A chess game ',
     image: 'assets/img/chess.gif',
     technologies: ['Flutter', 'Dart'],
     link: 'https://github.com/zheerbarzan/zheer_barzan',
@@ -30,14 +30,14 @@ final kProjectItems = [
   ),
   ProjectItem(
     title: 'Project_MineSweeper',
-    description: 'A MineSweeper game made in Flutter',
+    description: 'A MineSweeper game ',
     image: 'assets/img/mineswepper.gif',
     technologies: ['Flutter', 'Dart'],
     link: 'https://github.com/zheerbarzan/zheer_barzan',
   ),
   ProjectItem(
     title: 'Project_Forecast',
-    description: 'A realtime Weather application made in Flutter',
+    description: 'A realtime Weather application ',
     image: 'assets/img/weather.gif',
     technologies: ['Flutter', 'Dart'],
     link: 'https://github.com/zheerbarzan/zheer_barzan',

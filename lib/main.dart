@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Zheer Barzan',
       theme: lightMode,
-      darkTheme: darkMode,
+      //darkTheme: darkMode,
       home: const PortfolioView(),
     );
   }
