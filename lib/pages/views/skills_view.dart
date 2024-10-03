@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+
+class MyWidget extends StatelessWidget {
+  final double height;
+  final double width;
+  const MyWidget({super.key, required this.height, required this.width});
+
+  @override
+  Widget build(BuildContext context) {
+    return ResponsiveBuilder(builder: (context, size) {
+      if (size.isMobile) {
+        return SkillMobileView(
+          height: height,
+          width: width,
+        );
+      }
+      return SkillDesktopView(
+        height: height,
+        width: width,
+      );
+    });
+  }
+}
