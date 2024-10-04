@@ -2,7 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/components/skill_box.dart';
-import 'package:zheer_barzan/pages/skills_item.dart';
+import 'package:zheer_barzan/models/skills_item.dart';
 
 class SkillMobileView extends StatelessWidget {
   final double height;
