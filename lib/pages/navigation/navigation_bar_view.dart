@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:zheer_barzan/components/my_logo.dart';
+import 'package:zheer_barzan/components/toggle_theme.dart';
 import 'package:zheer_barzan/pages/navigation/navigaiton_bar_item.dart';
 import 'package:zheer_barzan/pages/navigation/navigation_items.dart';
 
@@ -28,6 +29,8 @@ class NavigationBarView extends StatelessWidget {
                 children: [
                   const MyLogo(),
                   const Spacer(),
+                  const ToggleThemeButton(),
+                  const Spacer(),
                   IconButton(
                     onPressed: () => Scaffold.of(context).openEndDrawer(),
                     icon: const Icon(Icons.menu),
@@ -52,6 +55,8 @@ class NavigationBarView extends StatelessWidget {
                   'Zheer Barzan',
                   style: GoogleFonts.poppins(fontSize: isSmall ? 20 : 30),
                 ),
+                const Spacer(),
+                const ToggleThemeButton(),
                 const Spacer(),
                 for (var item in kNavigationItems)
                   NavigationBarItem(text: item.text, onPressed: () {}),

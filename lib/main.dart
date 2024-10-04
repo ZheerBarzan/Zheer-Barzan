@@ -20,8 +20,7 @@ class MyApp extends StatelessWidget {
       scrollBehavior: const MaterialScrollBehavior().copyWith(scrollbars: true),
       debugShowCheckedModeBanner: false,
       title: 'Zheer Barzan',
-      theme: lightMode,
-      //darkTheme: darkMode,
+      theme: Provider.of<ThemeProvider>(context).themeData,
       home: const PortfolioView(),
     );
   }
