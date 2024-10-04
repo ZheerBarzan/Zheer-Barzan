@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/components/my_drawer.dart';
 import 'package:zheer_barzan/pages/navigation/navigation_bar_view.dart';
+import 'package:zheer_barzan/pages/views/about_view.dart';
 import 'package:zheer_barzan/pages/views/home_view.dart';
 import 'package:zheer_barzan/pages/views/project_view.dart';
 import 'package:zheer_barzan/pages/views/skills_view.dart';
@@ -25,6 +26,7 @@ class PortfolioView extends StatelessWidget {
               children: [
                 NavigationBarView(height: height, width: width),
                 HomeView(height: height, width: width),
+                AboutView(height: height, width: width),
                 SkillsView(height: height, width: width),
                 ProjectView(height: height, width: width),
                 Container(

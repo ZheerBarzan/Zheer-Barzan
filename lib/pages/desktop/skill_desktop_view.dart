@@ -30,13 +30,15 @@ class SkillDesktopView extends StatelessWidget {
             ),
             Row(
               children: [
-                for (var skill in kSkillsItems)
-                  Expanded(
-                    child: SkillBox(
-                        text: skill.title,
-                        image: skill.image,
-                        borderColor: skill.borderColor),
-                  ),
+                Wrap(children: [
+                  for (var skill in kSkillsItems)
+                    Expanded(
+                      child: SkillBox(
+                          text: skill.title,
+                          image: skill.image,
+                          borderColor: skill.borderColor),
+                    ),
+                ]),
               ],
             ),
           ],
