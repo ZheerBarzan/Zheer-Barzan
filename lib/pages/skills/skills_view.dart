@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:zheer_barzan/pages/desktop/skill_desktop_view.dart';
-import 'package:zheer_barzan/pages/mobile/skill_mobile_view.dart';
+import 'package:zheer_barzan/pages/skills/skill_desktop_view.dart';
+import 'package:zheer_barzan/pages/skills/skill_mobile_view.dart';
 
 class SkillsView extends StatelessWidget {
   final double height;

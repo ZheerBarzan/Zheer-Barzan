@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:zheer_barzan/pages/desktop/project_desktop_view.dart';
-import 'package:zheer_barzan/pages/mobile/project_mobile_view.dart';
+import 'package:zheer_barzan/pages/projects/project_desktop_view.dart';
+import 'package:zheer_barzan/pages/projects/project_mobile_view.dart';
 
 class ProjectView extends StatelessWidget {
   final double height;

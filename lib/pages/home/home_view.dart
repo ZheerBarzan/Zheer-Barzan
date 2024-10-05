@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:zheer_barzan/pages/desktop/home_desktop_view.dart';
-import 'package:zheer_barzan/pages/mobile/home_mobile_view.dart';
+import 'package:zheer_barzan/pages/home/home_desktop_view.dart';
+import 'package:zheer_barzan/pages/home/home_mobile_view.dart';
 
 class HomeView extends StatelessWidget {
   final double height;

@@ -15,25 +15,22 @@ class SkillMobileView extends StatelessWidget {
       height: height * 0.9,
       width: width,
       color: Theme.of(context).colorScheme.surface,
-      child: Expanded(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            AutoSizeText("Skills", style: GoogleFonts.poppins(fontSize: 30)),
-            AutoSizeText("my skills",
-                style: GoogleFonts.poppins(
-                    fontSize: 30,
-                    color: Theme.of(context).colorScheme.tertiary)),
-            const SizedBox(
-              height: 20,
-            ),
-            for (var skill in kSkillsItems)
-              SkillBox(
-                  text: skill.title,
-                  image: skill.image,
-                  borderColor: skill.borderColor),
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          AutoSizeText("Skills", style: GoogleFonts.poppins(fontSize: 30)),
+          AutoSizeText("my skills",
+              style: GoogleFonts.poppins(
+                  fontSize: 30, color: Theme.of(context).colorScheme.tertiary)),
+          const SizedBox(
+            height: 20,
+          ),
+          for (var skill in kSkillsItems)
+            SkillBox(
+                text: skill.title,
+                image: skill.image,
+                borderColor: skill.borderColor),
+        ],
       ),
     );
   }

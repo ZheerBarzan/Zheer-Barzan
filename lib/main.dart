@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:zheer_barzan/pages/views/portfolio_view.dart';
+import 'package:zheer_barzan/pages/portfolio_view.dart';
 
 import 'package:zheer_barzan/themes/theme_provider.dart';
 

@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:zheer_barzan/components/exp_box.dart';
 import 'package:zheer_barzan/components/neu_box.dart';
-import 'package:zheer_barzan/pages/exp_item.dart';
+import 'package:zheer_barzan/models/exp_item.dart';
 
 class AboutMobileView extends StatelessWidget {
   final double height;

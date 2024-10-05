@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/components/my_drawer.dart';
+import 'package:zheer_barzan/pages/contact/contact_view.dart';
 import 'package:zheer_barzan/pages/navigation/navigation_bar_view.dart';
-import 'package:zheer_barzan/pages/views/about_view.dart';
-import 'package:zheer_barzan/pages/views/home_view.dart';
-import 'package:zheer_barzan/pages/views/project_view.dart';
-import 'package:zheer_barzan/pages/views/skills_view.dart';
+import 'package:zheer_barzan/pages/about/about_view.dart';
+import 'package:zheer_barzan/pages/home/home_view.dart';
+import 'package:zheer_barzan/pages/projects/project_view.dart';
+import 'package:zheer_barzan/pages/skills/skills_view.dart';
 
 class PortfolioView extends StatelessWidget {
   const PortfolioView({super.key});
@@ -14,13 +15,11 @@ class PortfolioView extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
-    final ScrollController scrollController = ScrollController();
     return SafeArea(
       child: Scaffold(
         endDrawer: const MyDrawer(),
         backgroundColor: Theme.of(context).colorScheme.surface,
         body: SingleChildScrollView(
-            controller: scrollController,
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
@@ -29,6 +28,7 @@ class PortfolioView extends StatelessWidget {
                 AboutView(height: height, width: width),
                 SkillsView(height: height, width: width),
                 ProjectView(height: height, width: width),
+                ContactView(height: height, width: width),
                 Container(
                   height: height,
                   width: width,

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/components/inverse_button.dart';
 import 'package:zheer_barzan/components/neu_box.dart';
-import 'package:zheer_barzan/pages/project_item.dart';
+import 'package:zheer_barzan/models/project_item.dart';
 
 class ProjectMobileView extends StatelessWidget {
   final double height;
