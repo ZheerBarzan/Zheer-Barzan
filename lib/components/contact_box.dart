@@ -26,32 +26,35 @@ class ContactBox extends StatelessWidget {
     const double imageWidth = 50;
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: NeuBox(
-        child: Container(
-          decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.surface,
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: borderColor, width: 2),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                AutoSizeText(
-                  text,
-                  style: GoogleFonts.poppins(fontSize: isSmall ? 15 : 20),
-                  maxLines: 1,
-                ),
-                SizedBox(
-                  width: isSmall ? 7 : 15,
-                ),
-                SvgPicture.asset(
-                  image,
-                  height: isSmall ? imageHeight * 0.47 : imageHeight,
-                  width: isSmall ? imageWidth * 0.47 : imageWidth,
-                ),
-              ],
+      child: GestureDetector(
+        onTap: onPressed,
+        child: NeuBox(
+          child: Container(
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.surface,
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: borderColor, width: 2),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  AutoSizeText(
+                    text,
+                    style: GoogleFonts.poppins(fontSize: isSmall ? 15 : 20),
+                    maxLines: 1,
+                  ),
+                  SizedBox(
+                    width: isSmall ? 7 : 15,
+                  ),
+                  SvgPicture.asset(
+                    image,
+                    height: isSmall ? imageHeight * 0.47 : imageHeight,
+                    width: isSmall ? imageWidth * 0.47 : imageWidth,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

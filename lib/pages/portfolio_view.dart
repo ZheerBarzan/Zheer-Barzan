@@ -30,12 +30,15 @@ class PortfolioView extends StatelessWidget {
                 ProjectView(height: height, width: width),
                 ContactView(height: height, width: width),
                 Container(
-                  height: height,
+                  height: height * 0.05,
                   width: width,
-                  color: Theme.of(context).colorScheme.tertiary,
+                  color: Theme.of(context).colorScheme.surface,
                   child: Center(
-                    child: Text('Desktop View',
-                        style: GoogleFonts.poppins(fontSize: 30)),
+                    child: Text(
+                        'Copyright © 2025 Zheer Barzan. All rights reserved.',
+                        style: GoogleFonts.poppins(
+                            fontSize: 15,
+                            color: Theme.of(context).colorScheme.tertiary)),
                   ),
                 ),
               ],

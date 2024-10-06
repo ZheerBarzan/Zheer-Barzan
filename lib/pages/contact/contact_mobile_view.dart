@@ -2,8 +2,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:zheer_barzan/components/contact_box.dart';
-import 'package:zheer_barzan/components/inverse_button.dart';
 import 'package:zheer_barzan/components/neu_box.dart';
 import 'package:zheer_barzan/models/contact_item.dart';
 
@@ -13,6 +13,14 @@ class ContactMobileView extends StatelessWidget {
   const ContactMobileView(
       {super.key, required this.height, required this.width});
 
+  void launchURL(String url) async {
+    Uri uri = Uri.parse(url);
+    if (!await canLaunchUrl(uri)) {
+      throw 'Could not launch $url';
+    }
+    await launchUrl(uri);
+  }
+
   @override
   Widget build(BuildContext context) {
     final isSmall = width < 950;
@@ -20,7 +28,7 @@ class ContactMobileView extends StatelessWidget {
     return ResponsiveBuilder(
       builder: (context, size) {
         return Container(
-            height: height,
+            height: height * 0.8,
             width: width * 0.8,
             color: Theme.of(context).colorScheme.surface,
             child: Column(
@@ -48,12 +56,22 @@ class ContactMobileView extends StatelessWidget {
                       ),
                       Column(
                         children: [
+                          AutoSizeText(
+                            "My Socials",
+                            style: GoogleFonts.poppins(
+                              fontSize: 30,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
                           for (var contact in kContactItems)
                             ContactBox(
                               text: contact.title,
                               image: contact.image,
                               borderColor: contact.borderColor,
                               url: contact.link,
+                              onPressed: () => launchURL(contact.link),
                             ),
                         ],
                       ),

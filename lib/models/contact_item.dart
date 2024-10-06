@@ -14,8 +14,8 @@ final kContactItems = [
       'assets/img/linkedin.svg', Colors.blue),
   ContactItem('Github', 'https://github.com/ZheerBarzan',
       'assets/img/github.svg', Colors.black),
-  ContactItem(
-      'Phone', 'tel:+964770055333', "assets/img/whatsapp.svg", Colors.green),
-  ContactItem(
-      'Email', 'mailto:Y9JtH@example.com', 'assets/img/gmail.svg', Colors.red),
+  ContactItem('Phone', 'tel:+964 770 035 5333', "assets/img/whatsapp.svg",
+      Colors.green),
+  ContactItem('Email', 'mailto:zheerbarzan85@outlook.com?subject=Hi%20Zheer!',
+      'assets/img/gmail.svg', Colors.red),
 ];
