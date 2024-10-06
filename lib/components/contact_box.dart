@@ -10,12 +10,14 @@ class ContactBox extends StatelessWidget {
   final String image;
   final Color borderColor;
   final String? url;
+  final Function()? onPressed;
   const ContactBox(
       {super.key,
       required this.text,
       required this.image,
       required this.borderColor,
-      this.url});
+      this.url,
+      this.onPressed});
 
   @override
   Widget build(BuildContext context) {

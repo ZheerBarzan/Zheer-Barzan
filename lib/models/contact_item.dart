@@ -10,12 +10,12 @@ class ContactItem {
 }
 
 final kContactItems = [
-  ContactItem('LinkedIn', 'https://www.linkedin.com/in/zheer-barzan/',
-      'assets/linkedin.png', Colors.blue),
-  ContactItem('Github', 'https://github.com/zheerbarzan', 'assets/github.png',
-      Colors.black),
+  ContactItem('LinkedIn', 'https://www.linkedin.com/in/zheer-barzan-80aba5207/',
+      'assets/img/linkedin.svg', Colors.blue),
+  ContactItem('Github', 'https://github.com/ZheerBarzan',
+      'assets/img/github.svg', Colors.black),
   ContactItem(
-      'Phone', 'tel:+972-542-202-202', 'assets/phone.png', Colors.green),
+      'Phone', 'tel:+964770055333', "assets/img/whatsapp.svg", Colors.green),
   ContactItem(
-      'Email', 'mailto:Y9JtH@example.com', 'assets/email.png', Colors.red),
+      'Email', 'mailto:Y9JtH@example.com', 'assets/img/gmail.svg', Colors.red),
 ];
