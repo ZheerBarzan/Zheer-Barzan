@@ -2,10 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:zheer_barzan/components/my_list_tile.dart';
 import 'package:zheer_barzan/components/my_logo.dart';
-import 'package:zheer_barzan/pages/navigation/navigation_items.dart';
 
 class MyDrawer extends StatelessWidget {
-  const MyDrawer({super.key});
+  final double height;
+  final double width;
+  final Function(GlobalKey) scrollToSection;
+  final GlobalKey aboutKey;
+  final GlobalKey skillsKey;
+  final GlobalKey projectKey;
+  final GlobalKey contactKey;
+  const MyDrawer(
+      {super.key,
+      required this.height,
+      required this.width,
+      required this.scrollToSection,
+      required this.aboutKey,
+      required this.skillsKey,
+      required this.projectKey,
+      required this.contactKey});
 
   @override
   Widget build(BuildContext context) {
@@ -24,12 +38,26 @@ class MyDrawer extends StatelessWidget {
                     child: MyLogo(),
                   ),
                   //home list tile
-                  for (var items in kNavigationItems)
-                    MyListTile(
-                      icon: items.icon,
-                      text: items.text,
-                      onTap: () => Navigator.pop(context),
-                    ),
+                  MyListTile(
+                    icon: Icons.home,
+                    text: "About",
+                    onTap: () => scrollToSection(aboutKey),
+                  ),
+                  MyListTile(
+                    icon: Icons.handyman,
+                    text: "Skills",
+                    onTap: () => scrollToSection(skillsKey),
+                  ),
+                  MyListTile(
+                    icon: Icons.computer_sharp,
+                    text: "Projects",
+                    onTap: () => scrollToSection(projectKey),
+                  ),
+                  MyListTile(
+                    icon: Icons.contact_page,
+                    text: "Contact",
+                    onTap: () => scrollToSection(contactKey),
+                  )
                   //settings list tile
                 ],
               ),

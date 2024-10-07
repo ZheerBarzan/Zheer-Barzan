@@ -12,7 +12,7 @@ class SkillMobileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height * 0.9,
+      height: height,
       width: width,
       color: Theme.of(context).colorScheme.surface,
       child: Column(

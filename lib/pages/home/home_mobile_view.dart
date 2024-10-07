@@ -42,11 +42,20 @@ class HomeMobileView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AutoSizeText('Hello I\'m ',
-                    style: GoogleFonts.poppins(fontSize: 30), maxLines: 1),
+                    style: GoogleFonts.poppins(
+                        fontSize: 30,
+                        color: Theme.of(context).colorScheme.primary),
+                    maxLines: 1),
                 AutoSizeText('Zheer Barzan',
-                    style: GoogleFonts.poppins(fontSize: 30), maxLines: 1),
+                    style: GoogleFonts.poppins(
+                        fontSize: 30,
+                        color: Theme.of(context).colorScheme.primary),
+                    maxLines: 1),
                 AutoSizeText('Software Engineer</>',
-                    style: GoogleFonts.poppins(fontSize: 30), maxLines: 1),
+                    style: GoogleFonts.poppins(
+                        fontSize: 30,
+                        color: Theme.of(context).colorScheme.primary),
+                    maxLines: 1),
                 const SizedBox(
                   height: 20,
                 ),

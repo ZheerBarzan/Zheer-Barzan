@@ -4,14 +4,25 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:zheer_barzan/components/my_logo.dart';
 import 'package:zheer_barzan/components/toggle_theme.dart';
-import 'package:zheer_barzan/pages/navigation/navigaiton_bar_item.dart';
-import 'package:zheer_barzan/pages/navigation/navigation_items.dart';
 
 class NavigationBarView extends StatelessWidget {
   final double height;
   final double width;
+  final Function(GlobalKey) scrollToSection;
+  final GlobalKey aboutKey;
+  final GlobalKey skillsKey;
+  final GlobalKey projectKey;
+  final GlobalKey contactKey;
+
   const NavigationBarView(
-      {super.key, required this.height, required this.width});
+      {super.key,
+      required this.height,
+      required this.width,
+      required this.scrollToSection,
+      required this.aboutKey,
+      required this.skillsKey,
+      required this.projectKey,
+      required this.contactKey});
 
   @override
   Widget build(BuildContext context) {
@@ -58,8 +69,34 @@ class NavigationBarView extends StatelessWidget {
                 const Spacer(),
                 const ToggleThemeButton(),
                 const Spacer(),
-                for (var item in kNavigationItems)
-                  NavigationBarItem(text: item.text, onPressed: () {}),
+                TextButton(
+                  onPressed: () => scrollToSection(aboutKey),
+                  child: AutoSizeText(
+                    'About',
+                    style: GoogleFonts.poppins(fontSize: isSmall ? 15 : 30),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () => scrollToSection(skillsKey),
+                  child: AutoSizeText(
+                    'Skills',
+                    style: GoogleFonts.poppins(fontSize: isSmall ? 15 : 30),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () => scrollToSection(projectKey),
+                  child: AutoSizeText(
+                    'Projects',
+                    style: GoogleFonts.poppins(fontSize: isSmall ? 15 : 30),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () => scrollToSection(contactKey),
+                  child: AutoSizeText(
+                    'Contact',
+                    style: GoogleFonts.poppins(fontSize: isSmall ? 15 : 30),
+                  ),
+                ),
               ],
             ),
           ),
