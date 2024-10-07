@@ -1,6 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:zheer_barzan/components/neu_box.dart';
@@ -48,7 +47,7 @@ class ContactBox extends StatelessWidget {
                   SizedBox(
                     width: isSmall ? 7 : 15,
                   ),
-                  SvgPicture.asset(
+                  Image.asset(
                     image,
                     height: isSmall ? imageHeight * 0.47 : imageHeight,
                     width: isSmall ? imageWidth * 0.47 : imageWidth,

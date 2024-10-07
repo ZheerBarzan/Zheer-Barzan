@@ -62,7 +62,21 @@ class AboutDesktopView extends StatelessWidget {
                                     description: exp.description),
                             ],
                           ),
-                          const AutoSizeText("im zheer")
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 30, vertical: 10),
+                            child: AutoSizeText(
+                              "I can describe myself as a very motivated, reliable, responsible, smart and hardworking as well as communicating person.\nI'm a good timekeeper and I'm a very fast learner and I always try to learn new skills in my field.\nAnd I'm always ready to face the challenges that are coming my way and solve them easily.",
+                              style: GoogleFonts.poppins(
+                                fontSize: 15,
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
+                              maxLines: 7,
+                            ),
+                          ),
                         ],
                       ),
                     ),

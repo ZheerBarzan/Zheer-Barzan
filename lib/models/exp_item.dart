@@ -14,27 +14,24 @@ class ExpItem {
 
 final kExpItems = [
   ExpItem(
-    icon: Icons.book,
+    icon: Icons.school,
     title: 'Education',
-    description:
-        'I studied at National University of Sciences and Technology,\n Iran, with a degree in Computer Science and Engineering.',
+    description: 'BSc. in Computer Engineering At Komar University (KUST).',
   ),
   ExpItem(
-    icon: Icons.work,
-    title: 'Work Experience',
-    description:
-        'I worked as a Flutter Developer at National University of \nSciences and Technology, Iran. I also worked as a Web Developer in the same organization.',
+    icon: Icons.emoji_events,
+    title: 'Achievment',
+    description: 'Graduated Top 1st student in Komar University (KUST).',
   ),
   ExpItem(
     icon: Icons.school,
-    title: 'School Experience',
-    description:
-        'I studied at National University of Sciences and Technology,\n Iran, with a degree in Computer Science and Engineering.',
-  ),
-  ExpItem(
-    icon: Icons.book,
     title: 'Education',
     description:
-        'I studied at National University of Sciences and Technology,\n Iran, with a degree in Computer Science and Engineering.',
+        ' MSc. in Software Engineering At University of Kurdistan - Hawler (UKH).',
+  ),
+  ExpItem(
+    icon: Icons.work,
+    title: 'Experience',
+    description: 'ICT Instructor at British International School (BIS)',
   ),
 ];
