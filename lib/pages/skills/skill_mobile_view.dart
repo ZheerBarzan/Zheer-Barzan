@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/components/skill_box.dart';
 import 'package:zheer_barzan/models/skills_item.dart';
+import 'package:zheer_barzan/pages/skills/skill_desktop_view.dart';
 
 class SkillMobileView extends StatelessWidget {
   final double height;
@@ -25,11 +26,29 @@ class SkillMobileView extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          for (var skill in kSkillsItems)
-            SkillBox(
-                text: skill.title,
-                image: skill.image,
-                borderColor: skill.borderColor),
+          Expanded(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                if (constraints.maxWidth < 600) {
+                  return ListView(
+                    children: [
+                      for (var skill in kSkillsItems)
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 20),
+                          child: SkillBox(
+                            text: skill.title,
+                            image: skill.image,
+                            borderColor: skill.borderColor,
+                          ),
+                        ),
+                    ],
+                  );
+                } else {
+                  return SkillDesktopView(height: height, width: width);
+                }
+              },
+            ),
+          ),
         ],
       ),
     );

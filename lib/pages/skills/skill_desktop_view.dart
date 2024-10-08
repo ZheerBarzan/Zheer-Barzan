@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/components/skill_box.dart';
 import 'package:zheer_barzan/models/skills_item.dart';
+import 'package:zheer_barzan/pages/skills/skill_mobile_view.dart';
 
 class SkillDesktopView extends StatelessWidget {
   final double height;
@@ -19,23 +20,43 @@ class SkillDesktopView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          AutoSizeText("Skills", style: GoogleFonts.poppins(fontSize: 30)),
-          AutoSizeText("my skills",
-              style: GoogleFonts.poppins(
-                  fontSize: 30, color: Theme.of(context).colorScheme.tertiary)),
-          const SizedBox(
-            height: 20,
+          AutoSizeText(
+            "Skills",
+            style: GoogleFonts.poppins(fontSize: 30),
           ),
-          Row(
-            children: [
-              Wrap(spacing: 20, runSpacing: 20, children: [
-                for (var skill in kSkillsItems)
-                  SkillBox(
-                      text: skill.title,
-                      image: skill.image,
-                      borderColor: skill.borderColor),
-              ]),
-            ],
+          AutoSizeText(
+            "my skills",
+            style: GoogleFonts.poppins(
+              fontSize: 30,
+              color: Theme.of(context).colorScheme.tertiary,
+            ),
+          ),
+          const SizedBox(height: 20),
+          Expanded(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                if (constraints.maxWidth > 600) {
+                  // For larger screens, show in rows (2 or more columns)
+                  return GridView.count(
+                    crossAxisCount: 3, // Adjust this value based on screen size
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 5, // Adjust to shrink/grow skill boxes
+                    children: [
+                      for (var skill in kSkillsItems)
+                        SkillBox(
+                          text: skill.title,
+                          image: skill.image,
+                          borderColor: skill.borderColor,
+                        ),
+                    ],
+                  );
+                } else {
+                  // For smaller screens, show in a column
+                  return SkillMobileView(height: height, width: width);
+                }
+              },
+            ),
           ),
         ],
       ),
