@@ -37,7 +37,9 @@ class ContactMobileView extends StatelessWidget {
                 AutoSizeText("Contact me",
                     style: GoogleFonts.poppins(fontSize: 30)),
                 AutoSizeText("Get in touch with me",
-                    style: GoogleFonts.poppins(fontSize: 30)),
+                    style: GoogleFonts.poppins(
+                        fontSize: 30,
+                        color: Theme.of(context).colorScheme.tertiary)),
                 const SizedBox(
                   height: 20,
                 ),

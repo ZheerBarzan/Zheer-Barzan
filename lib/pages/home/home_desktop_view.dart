@@ -2,7 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:zheer_barzan/components/inverse_button.dart';
+import 'package:zheer_barzan/components/download_cv_button.dart';
 import 'package:zheer_barzan/components/neu_box.dart';
 
 class HomeDesktopView extends StatelessWidget {
@@ -52,21 +52,8 @@ class HomeDesktopView extends StatelessWidget {
                     const SizedBox(
                       height: 30,
                     ),
-                    Row(
-                      children: [
-                        InverseButton(
-                            text: "Download CV",
-                            secondaryColor:
-                                Theme.of(context).colorScheme.surface,
-                            fontColor: Theme.of(context).colorScheme.primary,
-                            onPressed: () {}),
-                        InverseButton(
-                            fontColor: Theme.of(context).colorScheme.primary,
-                            secondaryColor:
-                                Theme.of(context).colorScheme.surface,
-                            text: "Contact me",
-                            onPressed: () {}),
-                      ],
+                    const Row(
+                      children: [DownloadCVButton()],
                     ),
                   ],
                 )),
