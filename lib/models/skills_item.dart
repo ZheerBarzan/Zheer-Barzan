@@ -31,8 +31,44 @@ final kSkillsItems = [
     borderColor: Colors.orange.shade900,
   ),
   SkillsItem(
+    title: 'Python',
+    image: 'assets/img/python.svg',
+    borderColor: Colors.green,
+  ),
+  SkillsItem(
+      title: "C++ ", image: "assets/img/cpp3.svg", borderColor: Colors.red),
+  SkillsItem(
+    title: 'Blender',
+    image: 'assets/img/blender.svg',
+    borderColor: Colors.green,
+  ),
+  SkillsItem(
+      title: "Unreal Engine",
+      image: "assets/img/unrealengine.svg",
+      borderColor: Colors.red),
+  SkillsItem(
     title: 'Git',
     image: 'assets/img/git.svg',
     borderColor: Colors.orange,
-  )
+  ),
+  SkillsItem(
+    title: 'Github',
+    image: 'assets/img/github.svg',
+    borderColor: Colors.black,
+  ),
+  SkillsItem(
+    title: 'Docker',
+    image: 'assets/img/docker.svg',
+    borderColor: Colors.green,
+  ),
+  SkillsItem(
+      title: "Figma", image: "assets/img/figma.svg", borderColor: Colors.blue),
+  SkillsItem(
+      title: "Adobe Photoshop",
+      image: "assets/img/photoshop.svg",
+      borderColor: Colors.blue),
+  SkillsItem(
+      title: "Adobe After Effects",
+      image: "assets/img/AE.svg",
+      borderColor: Colors.blue),
 ];

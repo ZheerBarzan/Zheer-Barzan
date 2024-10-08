@@ -66,11 +66,11 @@ class AboutMobileView extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 10),
+                                horizontal: 10, vertical: 10),
                             child: AutoSizeText(
                               "I can describe myself as a very motivated, reliable, responsible, smart and hardworking as well as communicating person.\nI'm a good timekeeper and I'm a very fast learner and I always try to learn new skills in my field.\nAnd I'm always ready to face the challenges that are coming my way and solve them easily.",
                               style: GoogleFonts.poppins(
-                                fontSize: 15,
+                                fontSize: 25,
                                 color: Theme.of(context).colorScheme.primary,
                               ),
                               maxLines: 7,
