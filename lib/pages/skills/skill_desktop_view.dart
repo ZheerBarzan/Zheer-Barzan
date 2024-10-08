@@ -14,7 +14,7 @@ class SkillDesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height * 0.8,
+      height: height,
       width: width * 0.8,
       color: Theme.of(context).colorScheme.surface,
       child: Column(

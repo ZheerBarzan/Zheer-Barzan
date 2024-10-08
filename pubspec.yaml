@@ -38,8 +38,7 @@ dependencies:
   provider: ^6.1.2
   responsive_builder: ^0.7.1
   url_launcher: ^6.3.0
-  path_provider:
-  open_file:
+ 
 
 dev_dependencies:
   flutter_lints: ^4.0.0
@@ -59,6 +58,8 @@ flutter:
   assets:
     - assets/
     - assets/img/
+    - assets/img/projects/
+    - assets/img/tech/
     - assets/zheer-barzan.pdf
    
   #   - images/a_dot_ham.jpeg

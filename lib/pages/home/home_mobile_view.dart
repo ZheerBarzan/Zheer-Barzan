@@ -2,7 +2,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zheer_barzan/components/download_cv_button.dart';
-import 'package:zheer_barzan/components/inverse_button.dart';
 import 'package:zheer_barzan/components/neu_box.dart';
 
 class HomeMobileView extends StatelessWidget {
@@ -17,7 +16,7 @@ class HomeMobileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height * 0.8,
+      height: height,
       width: width,
       color: Theme.of(context).colorScheme.surface,
       child: Padding(

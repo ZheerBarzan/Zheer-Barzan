@@ -21,7 +21,7 @@ class HomeDesktopView extends StatelessWidget {
     return ResponsiveBuilder(
       builder: (context, size) {
         return Container(
-          height: height * 0.8,
+          height: height,
           width: width * 0.8,
           color: Theme.of(context).colorScheme.surface,
           child: Padding(

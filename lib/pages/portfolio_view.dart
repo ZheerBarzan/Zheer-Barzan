@@ -70,7 +70,7 @@ class _PortfolioViewState extends State<PortfolioView> {
                   color: Theme.of(context).colorScheme.surface,
                   child: Center(
                     child: Text(
-                        'Copyright © 2025 Zheer Barzan. All rights reserved.',
+                        'Copyright © 2025 Zheer Barzan. All rights reserved. made with Flutter',
                         style: GoogleFonts.poppins(
                             fontSize: 15,
                             color: Theme.of(context).colorScheme.tertiary)),
