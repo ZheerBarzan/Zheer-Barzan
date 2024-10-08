@@ -62,10 +62,7 @@ class NavigationBarView extends StatelessWidget {
             ),
             child: Row(
               children: [
-                AutoSizeText(
-                  'Zheer Barzan',
-                  style: GoogleFonts.poppins(fontSize: isSmall ? 20 : 30),
-                ),
+                const MyLogo(),
                 const Spacer(),
                 const ToggleThemeButton(),
                 const Spacer(),

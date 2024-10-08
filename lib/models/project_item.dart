@@ -19,27 +19,27 @@ final kProjectItems = [
     description: 'A chess game ',
     image: 'assets/img/chess.gif',
     technologies: ['Flutter', 'Dart'],
-    link: 'https://github.com/zheerbarzan/zheer_barzan',
+    link: 'https://github.com/ZheerBarzan/project_kasparov',
   ),
   ProjectItem(
     title: 'Project_Jordan',
     description: 'A NBA News Application',
     image: 'assets/img/jordan.gif',
     technologies: ['Flutter', 'Dart', 'Firebase'],
-    link: 'https://github.com/zheerbarzan/zheer_barzan',
+    link: 'https://github.com/ZheerBarzan/project_jordan',
   ),
   ProjectItem(
     title: 'Project_MineSweeper',
     description: 'A MineSweeper game ',
     image: 'assets/img/mineswepper.gif',
     technologies: ['Flutter', 'Dart'],
-    link: 'https://github.com/zheerbarzan/zheer_barzan',
+    link: 'https://github.com/ZheerBarzan/minesweeper-game-in-flutter',
   ),
   ProjectItem(
     title: 'Project_Forecast',
     description: 'A realtime Weather application ',
     image: 'assets/img/weather.gif',
     technologies: ['Flutter', 'Dart'],
-    link: 'https://github.com/zheerbarzan/zheer_barzan',
+    link: 'https://github.com/ZheerBarzan/project_forecast',
   )
 ];

@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:zheer_barzan/components/inverse_button.dart';
 import 'package:zheer_barzan/components/neu_box.dart';
 import 'package:zheer_barzan/models/project_item.dart';
@@ -10,6 +11,14 @@ class ProjectMobileView extends StatelessWidget {
   final double width;
   final ScrollController _scrollController = ScrollController();
   ProjectMobileView({super.key, required this.height, required this.width});
+
+  void launchURL(String url) async {
+    Uri uri = Uri.parse(url);
+    if (!await canLaunchUrl(uri)) {
+      throw 'Could not launch $url';
+    }
+    await launchUrl(uri);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +107,9 @@ class ProjectMobileView extends StatelessWidget {
                                         fontColor: Theme.of(context)
                                             .colorScheme
                                             .surface,
-                                        onPressed: () {}),
+                                        onPressed: () => launchURL(
+                                              item.link,
+                                            )),
                                   ),
                                 ],
                               ),
