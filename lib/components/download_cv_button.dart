@@ -18,8 +18,7 @@ class DownloadCVButton extends StatelessWidget {
   }
 
   void downloadCV() {
-    // Create a link element
-    const url = 'assets/zheer-barzan.pdf'; // Path to your CV file in the assets
+    const url = '/assets/zheer-barzan.pdf'; // Correct the path for web
     final anchor = html.AnchorElement(href: url)
       ..setAttribute("download", "zheer_barzan.pdf")
       ..click(); // Simulate a click on the anchor to trigger the download
