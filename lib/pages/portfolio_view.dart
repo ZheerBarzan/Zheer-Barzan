@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:zheer_barzan/components/copyright.dart';
+
 import 'package:zheer_barzan/components/my_drawer.dart';
 import 'package:zheer_barzan/pages/about/about_view.dart';
 import 'package:zheer_barzan/pages/contact/contact_view.dart';
@@ -78,29 +79,7 @@ class _PortfolioViewState extends State<PortfolioView> {
               ProjectView(key: projectKey, height: height, width: width),
               ContactView(key: contactKey, height: height, width: width),
               // Footer Section
-              Container(
-                height: height * 0.05,
-                width: width,
-                color: Theme.of(context).colorScheme.surface,
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Copyright © 2025 Zheer Barzan. Made with Flutter & Dart.',
-                        style: GoogleFonts.poppins(
-                          fontSize: 15,
-                          color: Theme.of(context).colorScheme.tertiary,
-                        ),
-                      ),
-                      const Icon(
-                        Icons.favorite,
-                        color: Colors.blueAccent,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              copyright(height: height, width: width)
             ],
           ),
         ),

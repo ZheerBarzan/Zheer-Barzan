@@ -18,7 +18,7 @@ class AboutMobileView extends StatelessWidget {
     return ResponsiveBuilder(
       builder: (context, size) {
         return Container(
-          height: height * 1.2,
+          height: height * 1.5,
           width: width * 0.9,
           color: Theme.of(context).colorScheme.surface,
           child: Padding(

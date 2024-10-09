@@ -28,60 +28,61 @@ class ContactMobileView extends StatelessWidget {
     return ResponsiveBuilder(
       builder: (context, size) {
         return Container(
-            height: height * 0.8,
-            width: width * 0.8,
-            color: Theme.of(context).colorScheme.surface,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                AutoSizeText("Contact me",
-                    style: GoogleFonts.poppins(fontSize: 30)),
-                AutoSizeText("Get in touch with me",
-                    style: GoogleFonts.poppins(
-                        fontSize: 30,
-                        color: Theme.of(context).colorScheme.tertiary)),
-                const SizedBox(
-                  height: 20,
-                ),
-                NeuBox(
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: NeuBox(
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset("assets/zheer1.JPG",
-                                height: isSmall ? imageWidth : 500),
-                          ),
+          height: height,
+          width: width * 0.8,
+          color: Theme.of(context).colorScheme.surface,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              AutoSizeText("Contact me",
+                  style: GoogleFonts.poppins(fontSize: 30)),
+              AutoSizeText("Get in touch with me",
+                  style: GoogleFonts.poppins(
+                      fontSize: 30,
+                      color: Theme.of(context).colorScheme.tertiary)),
+              const SizedBox(
+                height: 20,
+              ),
+              NeuBox(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: NeuBox(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset("assets/zheer1.JPG",
+                              height: isSmall ? imageWidth : 500),
                         ),
                       ),
-                      Column(
-                        children: [
-                          AutoSizeText(
-                            "My Socials",
-                            style: GoogleFonts.poppins(
-                              fontSize: 30,
-                            ),
+                    ),
+                    Column(
+                      children: [
+                        AutoSizeText(
+                          "My Socials",
+                          style: GoogleFonts.poppins(
+                            fontSize: 30,
                           ),
-                          const SizedBox(
-                            height: 10,
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        for (var contact in kContactItems)
+                          ContactBox(
+                            text: contact.title,
+                            image: contact.image,
+                            borderColor: contact.borderColor,
+                            url: contact.link,
+                            onPressed: () => launchURL(contact.link),
                           ),
-                          for (var contact in kContactItems)
-                            ContactBox(
-                              text: contact.title,
-                              image: contact.image,
-                              borderColor: contact.borderColor,
-                              url: contact.link,
-                              onPressed: () => launchURL(contact.link),
-                            ),
-                        ],
-                      ),
-                    ],
-                  ),
+                      ],
+                    ),
+                  ],
                 ),
-              ],
-            ));
+              ),
+            ],
+          ),
+        );
       },
     );
   }

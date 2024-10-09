@@ -23,14 +23,12 @@ class HomeMobileView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
         child: Column(
           children: [
-            Expanded(
-              child: NeuBox(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Image.asset(
-                    "assets/zheer1.JPG",
-                    fit: BoxFit.fill,
-                  ),
+            NeuBox(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset(
+                  "assets/zheer1.JPG",
+                  fit: BoxFit.fill,
                 ),
               ),
             ),

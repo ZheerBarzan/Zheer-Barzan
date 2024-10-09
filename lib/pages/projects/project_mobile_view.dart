@@ -26,7 +26,7 @@ class ProjectMobileView extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Container(
         color: Theme.of(context).colorScheme.surface,
-        height: height * 0.8,
+        height: height,
         width: width * 0.8,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

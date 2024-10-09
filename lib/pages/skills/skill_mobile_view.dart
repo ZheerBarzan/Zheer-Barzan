@@ -16,40 +16,44 @@ class SkillMobileView extends StatelessWidget {
       height: height,
       width: width,
       color: Theme.of(context).colorScheme.surface,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          AutoSizeText("Skills", style: GoogleFonts.poppins(fontSize: 30)),
-          AutoSizeText("my skills",
-              style: GoogleFonts.poppins(
-                  fontSize: 30, color: Theme.of(context).colorScheme.tertiary)),
-          const SizedBox(
-            height: 20,
-          ),
-          Expanded(
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                if (constraints.maxWidth < 800) {
-                  return ListView(
-                    children: [
-                      for (var skill in kSkillsItems)
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 20),
-                          child: SkillBox(
-                            text: skill.title,
-                            image: skill.image,
-                            borderColor: skill.borderColor,
-                          ),
-                        ),
-                    ],
-                  );
-                } else {
-                  return SkillDesktopView(height: height, width: width);
-                }
-              },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            AutoSizeText("Skills", style: GoogleFonts.poppins(fontSize: 30)),
+            AutoSizeText("my skills",
+                style: GoogleFonts.poppins(
+                    fontSize: 30,
+                    color: Theme.of(context).colorScheme.tertiary)),
+            const SizedBox(
+              height: 20,
             ),
-          ),
-        ],
+            Expanded(
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  if (constraints.maxWidth < 800) {
+                    return ListView(
+                      children: [
+                        for (var skill in kSkillsItems)
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 20),
+                            child: SkillBox(
+                              text: skill.title,
+                              image: skill.image,
+                              borderColor: skill.borderColor,
+                            ),
+                          ),
+                      ],
+                    );
+                  } else {
+                    return SkillDesktopView(height: height, width: width);
+                  }
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
