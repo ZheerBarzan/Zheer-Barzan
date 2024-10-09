@@ -84,6 +84,7 @@ class _PortfolioViewState extends State<PortfolioView> {
                 color: Theme.of(context).colorScheme.surface,
                 child: Center(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         'Copyright © 2025 Zheer Barzan. Made with Flutter & Dart.',
@@ -94,7 +95,7 @@ class _PortfolioViewState extends State<PortfolioView> {
                       ),
                       const Icon(
                         Icons.favorite,
-                        color: Colors.redAccent,
+                        color: Colors.blueAccent,
                       ),
                     ],
                   ),
