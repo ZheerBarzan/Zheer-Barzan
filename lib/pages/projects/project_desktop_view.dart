@@ -50,6 +50,7 @@ class ProjectDesktopView extends StatelessWidget {
               radius: const Radius.circular(100),
               controller: _scrollController,
               child: SingleChildScrollView(
+                controller: _scrollController,
                 physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 child: Row(
