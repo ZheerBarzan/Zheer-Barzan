@@ -1,4 +1,4 @@
-# zheer_barzan
+# zheer_barzan_flutter_web
 
 A new Flutter project.
 
