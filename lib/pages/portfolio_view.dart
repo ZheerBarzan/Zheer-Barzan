@@ -83,12 +83,20 @@ class _PortfolioViewState extends State<PortfolioView> {
                 width: width,
                 color: Theme.of(context).colorScheme.surface,
                 child: Center(
-                  child: Text(
-                    'Copyright © 2025 Zheer Barzan. Made with Flutter ❤️.',
-                    style: GoogleFonts.poppins(
-                      fontSize: 15,
-                      color: Theme.of(context).colorScheme.tertiary,
-                    ),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Copyright © 2025 Zheer Barzan. Made with Flutter & Dart.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 15,
+                          color: Theme.of(context).colorScheme.tertiary,
+                        ),
+                      ),
+                      const Icon(
+                        Icons.favorite,
+                        color: Colors.redAccent,
+                      ),
+                    ],
                   ),
                 ),
               ),

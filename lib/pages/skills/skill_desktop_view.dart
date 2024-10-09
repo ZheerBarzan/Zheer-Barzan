@@ -35,7 +35,7 @@ class SkillDesktopView extends StatelessWidget {
           Expanded(
             child: LayoutBuilder(
               builder: (context, constraints) {
-                if (constraints.maxWidth > 600) {
+                if (constraints.maxWidth > 800) {
                   // For larger screens, show in rows (2 or more columns)
                   return GridView.count(
                     crossAxisCount: 3, // Adjust this value based on screen size
