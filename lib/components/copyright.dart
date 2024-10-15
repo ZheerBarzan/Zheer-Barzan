@@ -24,7 +24,7 @@ class copyright extends StatelessWidget {
             Text(
               'Copyright © 2025 Zheer Barzan. Made with Flutter & Dart.',
               style: GoogleFonts.poppins(
-                fontSize: 15,
+                fontSize: 10,
                 color: Theme.of(context).colorScheme.tertiary,
               ),
             ),
