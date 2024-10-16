@@ -21,6 +21,13 @@ final kProjectItems = [
       technologies: ['Flutter', 'Dart'],
       link: 'https://github.com/ZheerBarzan/project_music'),
   ProjectItem(
+    title: "project_habit",
+    description: "Habit Tracker",
+    image: "assets/img/projects/habit.gif",
+    technologies: ['Flutter', 'Dart', 'ISAR Database'],
+    link: 'https://github.com/ZheerBarzan/project_habit',
+  ),
+  ProjectItem(
       title: "project_expense_tracker",
       description: "Expense Tracker",
       image: "assets/img/projects/expense.gif",
@@ -42,14 +49,14 @@ final kProjectItems = [
   ProjectItem(
       title: "project_whisper",
       description: "a chat appliaton",
-      image: "assets/img/projects/whisper.gif",
+      image: "assets/img/projects/news.gif",
       technologies: ['Flutter', 'Dart', 'Firebase'],
       link: 'https://github.com/ZheerBarzan/project_whisper'),
   ProjectItem(
       title: "project_Zeta",
       description: "Socail Media App for developers",
       image: "assets/img/projects/zeta.gif",
-      technologies: ['Flutter', 'Dart' 'Firebase'],
+      technologies: ['Flutter', 'Dart', 'Firebase'],
       link: 'https://github.com/ZheerBarzan/project_zeta'),
   ProjectItem(
       title: "project_pacman",
