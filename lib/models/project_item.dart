@@ -51,18 +51,18 @@ final kProjectItems = [
       image: "assets/img/projects/zeta.gif",
       technologies: ['Flutter', 'Dart' 'Firebase'],
       link: 'https://github.com/ZheerBarzan/project_zeta'),
-  /* ProjectItem(
+  ProjectItem(
       title: "project_pacman",
-      description: "Pacman Game",
+      description: "Pacman retro style Game",
       image: "assets/img/projects/pacman.gif",
       technologies: ['Flutter', 'Dart'],
       link: 'https://github.com/ZheerBarzan/project_pacman'),
   ProjectItem(
-      title: "tic_tac_toe",
-      description: "Tic-Tac-Toe Game",
-      image: "assets/img/projects/tic_tac_toe.gif",
+      title: "Project_XO",
+      description: "XO retro style Game",
+      image: "assets/img/projects/XO.gif",
       technologies: ['Flutter', 'Dart'],
-      link: 'https://github.com/ZheerBarzan/tic_tac_toe_game'),*/
+      link: 'https://github.com/ZheerBarzan/tic_tac_toe_game'),
   ProjectItem(
     title: 'Project_gauss',
     description: 'A Calculator Application ',
@@ -76,6 +76,13 @@ final kProjectItems = [
     image: 'assets/img/projects/chess.gif',
     technologies: ['Flutter', 'Dart'],
     link: 'https://github.com/ZheerBarzan/project_kasparov',
+  ),
+  ProjectItem(
+    title: "Project_Hermes",
+    description: "A News application using Fleunt UI Design and News API",
+    image: "assets/img/projects/news.gif",
+    technologies: ['Flutter', 'Dart', 'News API'],
+    link: 'https://github.com/ZheerBarzan/project_hermes',
   ),
   ProjectItem(
     title: 'Project_Jordan',
