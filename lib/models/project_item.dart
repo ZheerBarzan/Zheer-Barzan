@@ -120,7 +120,7 @@ final kProjectItems = [
   ProjectItem(
       title: "Project_XO",
       description: "XO retro style Game",
-      image: "assets/img/projects/XO.gif",
+      image: "assets/img/projects/xo.gif",
       technologies: ['Flutter', 'Dart'],
       link: 'https://github.com/ZheerBarzan/tic_tac_toe_game'),
 
