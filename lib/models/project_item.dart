@@ -46,6 +46,12 @@ final kProjectItems = [
     technologies: ['Flutter', 'Dart', 'News API'],
     link: 'https://github.com/ZheerBarzan/project_hermes',
   ),
+  ProjectItem(
+      title: "Flagology",
+      description: "A guess the Flag game",
+      image: "assets/img/projects/flagology.gif",
+      technologies: ['Swift', 'SwiftUI'],
+      link: "https://github.com/ZheerBarzan/Flagology"),
 
   // project_habit
   ProjectItem(
