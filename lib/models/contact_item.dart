@@ -16,6 +16,8 @@ final kContactItems = [
       'assets/img/tech/github.png', Colors.black),
   ContactItem('Phone', 'tel:+964 770 035 5333', "assets/img/tech/whatsapp.png",
       Colors.green),
+  ContactItem('Behance', 'https://www.behance.net/zheerbarzan',
+      'assets/img/tech/behance.png', Colors.black),
   ContactItem('Email', 'mailto:zheerbarzan85@outlook.com?subject=Hi%20Zheer!',
       'assets/img/tech/gmail.png', Colors.red),
 ];
