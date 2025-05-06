@@ -34,4 +34,9 @@ final kExpItems = [
     title: 'Experience',
     description: 'ICT Instructor at British International School (BIS)',
   ),
+  ExpItem(
+    icon: Icons.work,
+    title: 'Experience',
+    description: 'Software Engineer at KingForce Security Company ',
+  ),
 ];

@@ -26,6 +26,11 @@ final kSkillsItems = [
     borderColor: Colors.amber,
   ),
   SkillsItem(
+    title: 'AppWrite',
+    image: 'assets/img/tech/appwirte.svg',
+    borderColor: Colors.red,
+  ),
+  SkillsItem(
     title: 'Swift',
     image: 'assets/img/tech/swift.svg',
     borderColor: Colors.orange.shade900,
@@ -34,6 +39,11 @@ final kSkillsItems = [
     title: 'Python',
     image: 'assets/img/tech/python.svg',
     borderColor: Colors.green,
+  ),
+  SkillsItem(
+    title: 'Django',
+    image: 'assets/img/tech/django.svg',
+    borderColor: const Color.fromARGB(255, 2, 111, 40),
   ),
   SkillsItem(
       title: "C++ ",
